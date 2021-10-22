@@ -1,0 +1,26 @@
+<div class="cart">
+  <div class="page-title">
+    <div>
+      <span> {{ $t('cart') }} </span>
+      <span class="total-number"> {{ cartItems }} </span>
+    </div>
+  </div>
+  <div class="carts-container">
+    <div :key="cart.id" v-for="cart in carts">
+      <div class="cart-main-info">
+        <img
+          :src="cart.images.main"
+          :alt="cart.title"
+          @click="redirectToProductDetail(cart)"
+        />
+        <div>
+          <span class="title"> {{cart.title}}</span>
+          <span class="quantity">{{cart.quantity}} {{$t("unit")}}</span>
+        </div>
+      </div>
+      <span class="price">
+        {{addSeprator(cart.price.selling_price)}} {{$t('tomans')}}
+      </span>
+    </div>
+  </div>
+</div>

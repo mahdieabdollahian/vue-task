@@ -1,0 +1,12 @@
+<div class="product">
+  <img
+    :src="product.images.main"
+    :alt="product.title"
+    @click="redirectToProductDetail(product)"
+  />
+  <span @click="redirectToProductDetail(product)"> {{product.title}}</span>
+  <div class="product-price-row">
+    <button @click="addToCart(product,$event)" class="icon-plus" />
+    <span> {{addSeprator(product.price.selling_price)}} {{$t('tomans')}} </span>
+  </div>
+</div>

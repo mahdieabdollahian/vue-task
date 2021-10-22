@@ -1,0 +1,23 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  direction: ltr;
+  .page-item {
+    list-style: none;
+    & > span {
+      width: 25px;
+      height: 25px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+      font-size: 0.8rem;
+      margin: 0 3px;
+      cursor: pointer;
+    }
+  }
+  .selected-page {
+    background-color: $secondry;
+    color: white;
+  }
+}

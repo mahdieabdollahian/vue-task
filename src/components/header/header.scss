@@ -1,0 +1,62 @@
+.header {
+  background: white;
+  box-shadow: 0 7px 8px 0 $shadow;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  .inner-block {
+    width: 95%;
+    height: 70px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    & > img {
+      cursor: pointer;
+      height: 30px;
+    }
+    & > div {
+      position: relative;
+      & > a {
+        text-decoration: none;
+        .icon-cart {
+          font-size: 1.7rem;
+          color: black;
+        }
+        .total-items {
+          position: absolute;
+          bottom: -4px;
+          right: -10px;
+          font-size: 0.6rem;
+          line-height: 16px;
+          width: 21px;
+          height: 21px;
+          background: $primary;
+          border: 2px solid white;
+          border-radius: 7px;
+          color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-weight: 900;
+          box-sizing: border-box;
+        }
+      }
+    }
+  }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s;
+}
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}

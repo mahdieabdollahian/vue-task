@@ -1,0 +1,30 @@
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item">
+      <span
+        type="button"
+        @click="refetchList('INCREASE')"
+        v-if="currentPage < pages.length"
+        class="page-link icon-arrow_left"
+      />
+    </li>
+    <li class="page-item">
+      <span
+        type="button"
+        :class="[ pageNumber === currentPage ? 'selected-page' : '', 'page-link']"
+        v-for="pageNumber in pages.slice(currentPage-1, currentPage+5)"
+        @click="refetchList('SELECT_PAGE',pageNumber)"
+      >
+        {{pageNumber}}
+      </span>
+    </li>
+    <li class="page-item">
+      <span
+        type="button"
+        class="page-link icon-arrow_right"
+        v-if="currentPage != 1"
+        @click="refetchList('DECREASE')"
+      />
+    </li>
+  </ul>
+</nav>

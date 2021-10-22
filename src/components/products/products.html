@@ -1,0 +1,6 @@
+<div class="products-container">
+  <Loading v-show="loading" />
+  <div :key="product.id" v-for="product in products">
+    <Product :product="product" />
+  </div>
+</div>

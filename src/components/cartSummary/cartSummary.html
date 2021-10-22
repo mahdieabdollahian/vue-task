@@ -1,0 +1,23 @@
+<div class="summary-container">
+  <div class="detail-title">
+    <span>{{cartItems}} {{$t('product')}}</span>
+    <router-link to="/cart"><span>{{$t("showCarts")}}</span></router-link>
+  </div>
+  <div class="summary-list">
+    <div
+      class="summary-row"
+      :key="cart.id"
+      v-for="cart in carts"
+      @click="redirectToProductDetail(cart)"
+    >
+      <img :src="cart.images.main" :alt="cart.title" />
+      <div>
+        <span class="title"> {{cart.title}}</span>
+        <div class="bottom-section">
+          <span class="quantity">{{cart.quantity}} {{$t("unit")}}</span>
+          <span class="icon-delete" @click="deleteItem(cart)"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

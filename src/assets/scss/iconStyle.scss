@@ -1,0 +1,59 @@
+@import "./iconVariables.scss";
+
+@font-face {
+  font-family: "#{$icomoon-font-family}";
+  src: url("#{$icomoon-font-path}/#{$icomoon-font-family}.eot");
+  src: url("#{$icomoon-font-path}/#{$icomoon-font-family}.eot?7ca1us#iefix")
+      format("embedded-opentype"),
+    url("#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?7ca1us")
+      format("truetype"),
+    url("#{$icomoon-font-path}/#{$icomoon-font-family}.woff?7ca1us")
+      format("woff"),
+    url("#{$icomoon-font-path}/#{$icomoon-font-family}.svg?7ca1us##{$icomoon-font-family}")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "#{$icomoon-font-family}" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cart {
+  &:before {
+    content: $icon-cart;
+  }
+}
+.icon-delete {
+  &:before {
+    content: $icon-delete;
+  }
+}
+.icon-arrow_left {
+  &:before {
+    content: $icon-arrow_left;
+  }
+}
+.icon-arrow_right {
+  &:before {
+    content: $icon-arrow_right;
+  }
+}
+.icon-plus {
+  &:before {
+    content: $icon-plus;
+  }
+}

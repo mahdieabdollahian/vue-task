@@ -1,0 +1,14 @@
+<header class="header">
+  <div class="inner-block">
+    <img :src="logo" alt="digikala" @click="$router.push({ path: '/home'})" />
+    <div @mouseover="showCartOnHover()" @mouseleave="showCart = false">
+      <router-link to="/cart">
+        <span class="icon-cart" />
+        <span class="total-items" v-show="cartItems>0">{{cartItems}}</span>
+      </router-link>
+      <transition name="fade">
+        <CartSummary v-show="showCart && cartItems>0" />
+      </transition>
+    </div>
+  </div>
+</header>
